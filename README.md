@@ -29,6 +29,6 @@ If you'd like to run this portfolio locally:
 
 ## Contact Information
 Feel free to reach out to me:
-- **Email**: dax.sherwood@example.com
+- **Email**: dax.sherwood@gmail.com
 - **LinkedIn**: [linkedin.com/in/daxsherwood](#)
 - **GitHub**: [github.com/daxsherwood](#)
