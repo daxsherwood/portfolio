@@ -3,49 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dax Sherwood's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Dax Sherwood Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header Section */
+    header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('backdrop.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #f4f4f4
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin: 10px 0 0;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    #about h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    #about p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* Projects Section */
+    #projects {
+      margin: 20px auto;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .project h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+
+    /* Contact Section */
+    #contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .headshot {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact div {
+      flex: 1;
+    }
+
+    #contact p {
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 50px 20px;
+      }
+
+      #contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .headshot {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Dax Sherwood's Portfolio</h1>
-    <p>A central hub for potential employers, collaborators, and anyone interested in learning more about my work.</p>
+    <h1>Dax Sherwood</h1>
+    <p>4th Year Computer Science Student | Colorado College</p>
   </header>
 
-  <section id="features">
-    <h2>Features</h2>
-    <ul>
-      <li>Responsive design for seamless viewing on all devices</li>
-      <li>Interactive elements to enhance user experience</li>
-      <li>Detailed project descriptions with links to live demos and repositories</li>
-      <li>Contact form for easy communication</li>
-    </ul>
-  </section>
-
-  <section id="technologies">
-    <h2>Technologies Used</h2>
-    <ul>
-      <li>Python, Java, Swift</li>
-      <li>Frameworks: Docker</li>
-      <li>Tools: Git, VS Code, XCode, IntelliJ IDEA</li>
-    </ul>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a 4th year Computer Science student at Colorado College, minoring in Mathematics and Human Biology & Kinesiology. 
+      Currently, I am interning at Gap Inc., working with their Generative AI team to build a tool for clothing image segmentation, 
+      similar product retrieval, and outfit generation.
+    </p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>Smart Home Controller</h3>
-      <p><strong>Description:</strong> Together, my father and I, creating an iPhone app to control the AV systems in our home.</p>
-      <p><strong>Technologies:</strong> Utilized Atlona Gateway API</p>
-      <p><strong>Links:</strong> <a href="#">Live Demo</a> | <a href="#">Repository</a></p>
+      <p><strong>Description:</strong> Together, my father and I created an iPhone app to control the AV systems in our home.</p>
+      <p><strong>Technologies:</strong> Swift UI, Atlona Gateway API, Computer Networks</p>
+      <p><strong>Links:</strong> <a href="#">See More</a> | <a href="#">Repository</a></p>
     </div>
+    <div class="project">
+        <h3>Gap Smart Styler</h3>
+        <p><strong>Description:</strong> I finetuned and created my own model for image segmentation trained on a dataset of clothing I created. 
+            Utilizing FashionCLIP model and OpenAI API to get outfit descriptions.
+            Lastly, utilizing Gap tools for product matching.</p>
+        <p><strong>Technologies:</strong> Python, Azure, Databricks, Docker</p>
+        <p><strong>Links:</strong> <a href="#">See More</a></p>
+      </div>
   </section>
 
   <section id="contact">
     <h2>Contact Information</h2>
-    <p>Email: <a href="mailto:dax.sherwood@example.com">dax.sherwood@example.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/daxsherwood</a></p>
-    <p>GitHub: <a href="#">github.com/daxsherwood</a></p>
+    <img src="headshot.jpg" alt="Dax Sherwood Headshot" class="headshot">
+    <div>
+      <p>Email: <a href="mailto:dax.sherwood@example.com">dax.sherwood@gmail.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/daxsherwood</a></p>
+      <p>GitHub: <a href="#">github.com/daxsherwood</a></p>
+    </div>
   </section>
 </body>
 </html>
